@@ -1,5 +1,6 @@
 package com.gng25001.suivitdemedicaments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +37,13 @@ public class Menu extends AppCompatActivity {
      */
     public void onClick(View view){
 
-        
+        //Determine which button was press
+        if (view == btnMedList){
+            //Open the medicament list layout and class
+            startActivity(new Intent(getApplicationContext(), MedicamentList.class));
+        }else if (view == btnSettings){
+            //Open the settings layout and class
+            startActivity(new Intent(getApplicationContext(), Settings.class));
+        }
     }
 }
