@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MenuGlobalLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/MenuMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtMenuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="75sp" />
+
+        <Button
+            android:id="@+id/btnMenuGoToMedList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/go_to_medicamentation_list"
+            android:textAlignment="center"
+            android:textSize="35sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <Button
+            android:id="@+id/btnMenuSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            android:textSize="35sp" />
+    </LinearLayout>
 </LinearLayout>
