@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuivitDeMedicaments" >
 
+        <activity android:name=".MedicamentList"/>
+        <activity android:name=".Settings"/>
         <activity android:name=".Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
 
     </application>
 
