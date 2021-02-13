@@ -23,6 +23,7 @@
             android:id="@+id/btnMenuGoToMedList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/go_to_medicamentation_list"
             android:textAlignment="center"
             android:textSize="35sp" />
@@ -35,8 +36,10 @@
             android:id="@+id/btnMenuSettings"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="onClick"
             android:text="@string/settings"
             android:textAlignment="center"
             android:textSize="35sp" />
+
     </LinearLayout>
 </LinearLayout>
