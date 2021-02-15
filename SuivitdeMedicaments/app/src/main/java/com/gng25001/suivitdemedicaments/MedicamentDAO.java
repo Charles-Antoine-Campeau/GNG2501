@@ -1,5 +1,6 @@
 package com.gng25001.suivitdemedicaments;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -21,8 +22,8 @@ public interface MedicamentDAO {
     public void deleteMedicament(Medicament medicament);
 
     @Query("SELECT * FROM Medicament")
-    public Medicament[] loadAllMedicament();
+    public LiveData<List<Medicament>> loadAllMedicament();
 
     @Query("SELECT names FROM Medicament")
-    public List<Medicament> loadAllNames();
+    public LiveData<List<Medicament>> loadAllNames();
 }
