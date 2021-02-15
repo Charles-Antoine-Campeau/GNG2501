@@ -1,10 +1,12 @@
-package com.gng25001.suivitdemedicaments;
+package com.gng25001.suivitdemedicaments.database;
 
 import android.content.Context;
 
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.gng25001.suivitdemedicaments.Medicament;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

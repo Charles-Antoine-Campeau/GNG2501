@@ -10,9 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SuivitDeMedicaments" >
 
-        <activity android:name=".MedicamentList"/>
-        <activity android:name=".Settings"/>
-        <activity android:name=".Menu">
+        <activity android:name=".associatedtolayouts.MedicamentList"/>
+        <activity android:name=".associatedtolayouts.Settings"/>
+        <activity android:name=".associatedtolayouts.Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

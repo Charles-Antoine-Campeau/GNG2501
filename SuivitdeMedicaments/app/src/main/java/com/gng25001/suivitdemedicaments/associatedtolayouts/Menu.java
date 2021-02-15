@@ -1,4 +1,4 @@
-package com.gng25001.suivitdemedicaments;
+package com.gng25001.suivitdemedicaments.associatedtolayouts;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.gng25001.suivitdemedicaments.R;
 
 public class Menu extends AppCompatActivity {
 

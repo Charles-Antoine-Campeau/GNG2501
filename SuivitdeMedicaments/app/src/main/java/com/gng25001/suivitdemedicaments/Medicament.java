@@ -1,9 +1,11 @@
 package com.gng25001.suivitdemedicaments;
 
+import android.app.Application;
 import android.graphics.Bitmap;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 @Entity
@@ -86,6 +88,8 @@ public class Medicament {
 
     //**********************************************************************************************
     //SETTERS
-
+    public String setName(String name) throws IllegalArgumentException {
+        throw new NullPointerException("Method not implemented");
+    }
 
 }

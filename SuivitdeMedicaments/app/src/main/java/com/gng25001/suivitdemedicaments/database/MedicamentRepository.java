@@ -1,6 +1,10 @@
-package com.gng25001.suivitdemedicaments;
+package com.gng25001.suivitdemedicaments.database;
 
 import android.app.Application;
+
+import com.gng25001.suivitdemedicaments.Medicament;
+import com.gng25001.suivitdemedicaments.database.AppDatabase;
+import com.gng25001.suivitdemedicaments.database.MedicamentDAO;
 
 import java.util.List;
 
