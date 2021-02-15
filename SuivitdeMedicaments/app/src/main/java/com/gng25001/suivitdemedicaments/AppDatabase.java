@@ -2,13 +2,9 @@ package com.gng25001.suivitdemedicaments;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.DatabaseConfiguration;
-import androidx.room.InvalidationTracker;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,12 +16,12 @@ public abstract class AppDatabase extends RoomDatabase {
      * Expose the MedicamentDAO
      * @return an instance of MedicamentDAO
      */
-    public abstract MedicamentDAO medicamentDAO();
+     abstract MedicamentDAO medicamentDAO();
 
     //Instance for singleton
     private static volatile AppDatabase INSTANCE;
 
-    //Thread pool to execute asynchronous background opperations
+    //Thread pool to execute asynchronous background operations
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
@@ -44,5 +40,6 @@ public abstract class AppDatabase extends RoomDatabase {
         }
         return INSTANCE;
     }
+
 
 }
