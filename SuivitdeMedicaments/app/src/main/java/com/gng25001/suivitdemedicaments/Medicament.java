@@ -3,6 +3,7 @@ package com.gng25001.suivitdemedicaments;
 import android.app.Application;
 import android.graphics.Bitmap;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -14,11 +15,9 @@ public class Medicament {
     //**********************************************************************************************
     //VARIABLES
     @PrimaryKey
+    @NonNull
     @ColumnInfo(name = "names")
     private String name;
-
-    @ColumnInfo(name = "images")
-    private Bitmap image;
 
     @ColumnInfo(name = "doses")
     private short dose;
@@ -39,38 +38,19 @@ public class Medicament {
     /**
      * Complete constructor for Medicament
      * @param name name of medicament
-     * @param image image of medicament
      * @param dose preset quantity to be taken
      * @param waitingTimeBeforeNewStockDays necessary time before new order to pharmacy
      * @param prescriptionSize given quantity by pharmacy
      * @param totalOfMedicament current total of medicament
      */
-    public Medicament(String name, Bitmap image, short dose, short waitingTimeBeforeNewStockDays,
-                      short prescriptionSize, int totalOfMedicament) {
-        this.name = name;
-        this.image = image;
-        this.dose = dose;
-        this.waitingTimeBeforeNewStockDays = waitingTimeBeforeNewStockDays;
-        this.prescriptionSize = prescriptionSize;
-        this.totalOfMedicament = totalOfMedicament;
-
-    }
-
-    /**
-     * Constructor without image
-     * @param name name of medicament
-     * @param dose preset quantity to be taken
-     * @param waitingTimeBeforeNewStockDays necessary time before new order to pharmacy
-     * @param prescriptionSize given quantity by pharmacy
-     * @param totalOfMedicament current total of medicament
-     */
-    public Medicament(String name, short dose, short waitingTimeBeforeNewStockDays,
+    public Medicament(String name,short dose, short waitingTimeBeforeNewStockDays,
                       short prescriptionSize, int totalOfMedicament) {
         this.name = name;
         this.dose = dose;
         this.waitingTimeBeforeNewStockDays = waitingTimeBeforeNewStockDays;
         this.prescriptionSize = prescriptionSize;
         this.totalOfMedicament = totalOfMedicament;
+
     }
     //END OF CONSTRUCTORS
     //**********************************************************************************************
@@ -78,7 +58,6 @@ public class Medicament {
     //**********************************************************************************************
     //GETTERS
     public String getName() {return name;}
-    public Bitmap getImage() {return image;}
     public short getDose() {return dose;}
     public short getWaitingTimeBeforeNewStockDays() {return waitingTimeBeforeNewStockDays;}
     public short getPrescriptionSize() {return prescriptionSize;}
@@ -88,8 +67,13 @@ public class Medicament {
 
     //**********************************************************************************************
     //SETTERS
-    public String setName(String name) throws IllegalArgumentException {
-        throw new NullPointerException("Method not implemented");
+    public void setName(String name) {this.name = name;}
+    public void setDose(short dose) {this.dose = dose;}
+    public void setWaitingTimeBeforeNewStockDays(short waitingTimeBeforeNewStockDays) {
+        this.waitingTimeBeforeNewStockDays = waitingTimeBeforeNewStockDays;
     }
-
+    public void setPrescriptionSize(short prescriptionSize) {this.prescriptionSize = prescriptionSize;}
+    public void setTotalOfMedicament(int totalOfMedicament) {this.totalOfMedicament = totalOfMedicament;}
+    //END OF SETTERS
+    //**********************************************************************************************
 }
