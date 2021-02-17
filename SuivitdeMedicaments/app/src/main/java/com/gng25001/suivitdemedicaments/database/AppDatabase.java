@@ -11,6 +11,12 @@ import com.gng25001.suivitdemedicaments.Medicament;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * Database of the application.  Defined as a singleton, with getDatabase for the instance.
+ * Does't do much except returning the DAO with the medicamentDAO() method
+ * @author Charles-Antoine
+ * 16/02/2021
+ */
 @Database(entities = {Medicament.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -36,6 +42,11 @@ public abstract class AppDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             synchronized (AppDatabase.class) {
                 if(INSTANCE == null) {
+                    //*****IMPORTANT*****
+                    //Currently gets the data on main thread.  This could cause the app to freeze
+                    //or stop working.  It could be run on background with the Executor defined over
+                    //but I'm too lazy and not enough a programmer maniac ot care.  Although, I
+                    // might change it if I have time or if the app crashes too often.
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                             AppDatabase.class, "medicament_database")
                             .allowMainThreadQueries()
