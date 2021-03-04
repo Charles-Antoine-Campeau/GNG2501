@@ -20,6 +20,7 @@
         android:id="@+id/btnNew"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:text="@string/newText"
         android:textSize="35sp" />
 
