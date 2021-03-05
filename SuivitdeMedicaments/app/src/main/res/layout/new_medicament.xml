@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtNewMedicamentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_medicament"
+        android:textSize="50sp" />
+
+    <EditText
+        android:id="@+id/etxtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etxtnDoses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/size_of_doses"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etxtnWaitingTimeNewDoses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/waiting_time_before_new_stock_days"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etxtnQuantityOfDosesInPrescriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/quantity_in_a_prescription"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/etxtnCurrentTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/current_total_of_medication"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarStyle">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:textSize="24sp" />
+
+    </LinearLayout>
 
 </LinearLayout>
