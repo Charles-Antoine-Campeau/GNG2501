@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/txtNewMedicamentTitle"
+        android:id="@+id/txtNewMedicationTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/create_new_medicament"
@@ -69,7 +69,7 @@
         style="?android:attr/buttonBarStyle">
 
         <Button
-            android:id="@+id/btnCancel"
+            android:id="@+id/btnCancelNewMed"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/btnSave"
+            android:id="@+id/btnSaveNewMed"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
