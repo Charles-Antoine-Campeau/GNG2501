@@ -1,7 +1,9 @@
 package com.gng25001.suivitdemedicaments.associatedtolayouts;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -10,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.gng25001.suivitdemedicaments.R;
 import com.gng25001.suivitdemedicaments.database.NameList;
 
-import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -22,6 +23,8 @@ public class MedicamentList extends AppCompatActivity {
     //VARIABLES
     //list with the names of all the medicament saved
     private List<String> names;
+
+    private Button newButton;
     //END OF VARIABLES
     //**********************************************************************************************
 
@@ -37,6 +40,9 @@ public class MedicamentList extends AppCompatActivity {
 
         //set view as associated layout
         setContentView(R.layout.medicament_list);
+
+        //get the view of the new button
+        newButton = findViewById(R.id.btnNew);
 
         //get the names from the database
         getNames();
@@ -90,6 +96,9 @@ public class MedicamentList extends AppCompatActivity {
      */
     public void onClick(View view) {
         //determine which button was pressed
-        
+        if (view == newButton) {
+            //open the new medicament layout
+            startActivity(new Intent(getApplicationContext(), NewMedicament.class));
+        }
     }
 }
