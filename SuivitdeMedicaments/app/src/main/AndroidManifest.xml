@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 
+        <activity android:name=".associatedtolayouts.NewMedicament"/>
         <activity android:name=".associatedtolayouts.MedicamentList"/>
         <activity android:name=".associatedtolayouts.Settings"/>
         <activity android:name=".associatedtolayouts.Menu">
