@@ -10,13 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
 
-        <activity android:name=".associatedtolayouts.NewMedicament"/>
-        <activity android:name=".associatedtolayouts.MedicamentList"/>
-        <activity android:name=".associatedtolayouts.Settings"/>
-        <activity android:name=".associatedtolayouts.Menu">
+        <activity
+            android:name=".associatedtolayouts.NotificationMessage"
+            android:parentActivityName=".associatedtolayouts.Menu"
+        />
+        <activity
+            android:name=".associatedtolayouts.NewMedicament"
+        />
+        <activity
+            android:name=".associatedtolayouts.MedicamentList"
+        />
+        <activity
+            android:name=".associatedtolayouts.Settings"
+        />
+        <activity
+            android:name=".associatedtolayouts.Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
