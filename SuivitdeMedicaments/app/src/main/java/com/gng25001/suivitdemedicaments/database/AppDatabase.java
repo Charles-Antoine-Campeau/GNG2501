@@ -24,7 +24,7 @@ public abstract class AppDatabase extends RoomDatabase {
      * Expose the MedicamentDAO
      * @return an instance of MedicamentDAO
      */
-     abstract MedicamentDAO medicamentDAO();
+     public abstract MedicamentDAO medicamentDAO();
 
     //Instance for singleton
     private static volatile AppDatabase INSTANCE;
@@ -38,7 +38,7 @@ public abstract class AppDatabase extends RoomDatabase {
      * @param context
      * @return the instance
      */
-    static AppDatabase getDatabase(final Context context) {
+    public static AppDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
             synchronized (AppDatabase.class) {
                 if(INSTANCE == null) {
