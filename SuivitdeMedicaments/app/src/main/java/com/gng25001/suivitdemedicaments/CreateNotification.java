@@ -43,7 +43,7 @@ public class CreateNotification {
      * Get the singleton instance of the class
      * @return the instance of the class
      */
-    public CreateNotification getInstance() {
+    public static CreateNotification getInstance() {
         if (instance == null) {
             new CreateNotification();
         }
