@@ -1,5 +1,6 @@
 package com.gng25001.suivitdemedicaments.associatedtolayouts;
 
+import android.app.Application;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -8,7 +9,10 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.gng25001.suivitdemedicaments.Medicament;
 import com.gng25001.suivitdemedicaments.R;
+import com.gng25001.suivitdemedicaments.database.AppDatabase;
+import com.gng25001.suivitdemedicaments.database.MedicamentDAO;
 
 import org.w3c.dom.Text;
 
@@ -49,7 +53,7 @@ public class NewMedicament extends AppCompatActivity {
     //END OF ONCREATE
     //**********************************************************************************************
 
-    public void onClick(View view) {
+    public void onClickNewMedicament(View view) {
         //determine which button was pressed
         if (view == btnCancel) {
             //discard all changes and goes back to the medication list
@@ -77,6 +81,20 @@ public class NewMedicament extends AppCompatActivity {
             if (TextUtils.isEmpty(etxtnCurrentTotal.getText().toString())) {
                 etxtnCurrentTotal.setError("A current total is required");
                 hasError = true;
+            }
+
+            //if no input errors, create the medicament and saves it in the database
+            if (!hasError) {
+                Medicament medicament = new Medicament(etxtName.getText().toString(),
+                        Short.parseShort(etxtnDoses.getText().toString()),
+                        Short.parseShort(etxtnWaitingTimeNewDoses.getText().toString()),
+                        Short.parseShort(etxtnQuantityOfDosesInPrescriptions.getText().toString()),
+                        Integer.parseInt(etxtnCurrentTotal.getText().toString())
+                );
+
+                AppDatabase appDatabase = AppDatabase.getDatabase(getApplicationContext());
+                MedicamentDAO medicamentDAO = appDatabase.medicamentDAO();
+                medicamentDAO.insertNewMedicament(medicament);
             }
         }
     }
