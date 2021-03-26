@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -69,17 +70,18 @@ public class MedicamentList extends AppCompatActivity {
      * Add the list of names to the screen
      */
     private void addList() {
-        //get the scroll view where the elements will be added
-        ScrollView scrollView = findViewById(R.id.scrvMedicamentList);
+        //get the linear layout where the elements will be added
+        LinearLayout linearLayout = findViewById(R.id.LLMedicamentListList);
 
         //loop through all the names
         for (String name : names) {
             //create a text view for the name
             TextView textView = new TextView(this);
             textView.setText(name);
+            textView.setTextSize(24);
 
             //add the text view to the layout
-            scrollView.addView(textView);
+            linearLayout.addView(textView);
         }
 
 
