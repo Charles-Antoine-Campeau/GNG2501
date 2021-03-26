@@ -1,5 +1,6 @@
 package com.gng25001.suivitdemedicaments.associatedtolayouts;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -73,6 +74,7 @@ public class MedicamentList extends AppCompatActivity {
         //get the linear layout where the elements will be added
         LinearLayout linearLayout = findViewById(R.id.LLMedicamentListList);
 
+        int i = 1;
         //loop through all the names
         for (String name : names) {
             //create a text view for the name
@@ -80,8 +82,20 @@ public class MedicamentList extends AppCompatActivity {
             textView.setText(name);
             textView.setTextSize(24);
 
-            //add the text view to the layout
+            Button btnDelete = new Button(this);
+            btnDelete.setText(R.string.delete_medication);
+            btnDelete.setId(i++);
+            btnDelete.setTextSize(24);
+
+            Button btnModify = new Button(this);
+            btnModify.setText(R.string.modify_medication);
+            btnModify.setId(i++);
+            btnModify.setTextSize(24);
+
+            //add the new elements to the layout
             linearLayout.addView(textView);
+            linearLayout.addView(btnDelete);
+            linearLayout.addView(btnModify);
         }
 
 

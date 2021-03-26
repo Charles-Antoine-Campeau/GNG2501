@@ -12,4 +12,6 @@
     <string name="quantity_in_a_prescription">Quantity in a prescription</string>
     <string name="current_total_of_medication">Current total of medication</string>
     <string name="save">Save</string>
+    <string name="delete_medication">Delete</string>
+    <string name="modify_medication">Modify</string>
 </resources>
