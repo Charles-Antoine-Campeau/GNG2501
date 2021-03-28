@@ -13,5 +13,6 @@
     <string name="current_total_of_medication">Current total of medication</string>
     <string name="save">Save</string>
     <string name="delete_medication">Delete</string>
-    <string name="modify_medication">Modify</string>
+    <string name="modify">Modify</string>
+    <string name="modify_medication">Modify Medication</string>
 </resources>
