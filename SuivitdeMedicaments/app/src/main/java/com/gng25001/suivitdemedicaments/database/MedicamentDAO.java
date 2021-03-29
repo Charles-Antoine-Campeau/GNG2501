@@ -27,4 +27,7 @@ public interface MedicamentDAO {
 
     @Query("SELECT names FROM Medicament")
     public List<String> loadAllNames();
+
+    @Query("SELECT * FROM Medicament WHERE names LIKE :name")
+    public Medicament loadMediament(String name);
 }

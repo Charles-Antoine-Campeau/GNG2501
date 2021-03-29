@@ -5,14 +5,14 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/txtNewMedicationTitle"
+        android:id="@+id/txtModifyMedication"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/create_new_medicament"
+        android:text="@string/modify_medication"
         android:textSize="50sp" />
 
     <EditText
-        android:id="@+id/etxtName"
+        android:id="@+id/etxtNameModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -22,7 +22,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/etxtnDoses"
+        android:id="@+id/etxtnDosesModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -32,7 +32,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/etxtnWaitingTimeNewDoses"
+        android:id="@+id/etxtnWaitingTimeNewDosesModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +42,7 @@
         android:textSize="20sp" />
 
     <EditText
-        android:id="@+id/etxtnQuantityOfDosesInPrescriptions"
+        android:id="@+id/etxtnQuantityOfDosesInPrescriptionsModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -52,7 +52,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/etxtnCurrentTotal"
+        android:id="@+id/etxtnCurrentTotalModify"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -63,10 +63,10 @@
 
     <LinearLayout
         android:id="@+id/llButtons"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        style="?android:attr/buttonBarStyle">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnCancelModifyMed"
@@ -74,7 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickNewMedicament"
+            android:onClick="onClickModifyMedication"
             android:text="@android:string/cancel"
             android:textSize="24sp" />
 
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="onClickNewMedicament"
+            android:onClick="onClickModifyMedication"
             android:text="@string/save"
             android:textSize="24sp" />
 

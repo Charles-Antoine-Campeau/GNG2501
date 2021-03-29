@@ -1,6 +1,5 @@
 package com.gng25001.suivitdemedicaments.associatedtolayouts;
 
-import android.app.Application;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -13,8 +12,6 @@ import com.gng25001.suivitdemedicaments.Medicament;
 import com.gng25001.suivitdemedicaments.R;
 import com.gng25001.suivitdemedicaments.database.AppDatabase;
 import com.gng25001.suivitdemedicaments.database.MedicamentDAO;
-
-import org.w3c.dom.Text;
 
 public class NewMedicament extends AppCompatActivity {
 
@@ -40,8 +37,8 @@ public class NewMedicament extends AppCompatActivity {
         setContentView(R.layout.new_medicament);
 
         //get the cancel and save buttons
-        btnCancel = findViewById(R.id.btnCancelNewMed);
-        btnSave = findViewById(R.id.btnSaveNewMed);
+        btnCancel = findViewById(R.id.btnCancelModifyMed);
+        btnSave = findViewById(R.id.btnSaveModifiedMed);
 
         //get the edit text items
         etxtName = findViewById(R.id.etxtName);
@@ -53,14 +50,24 @@ public class NewMedicament extends AppCompatActivity {
     //END OF ONCREATE
     //**********************************************************************************************
 
+    //**********************************************************************************************
+    //PUBLIC METHODS
+
+    /**
+     * On click method for the buttons on the new medicament layout
+     * @param view the clicked object
+     */
     public void onClickNewMedicament(View view) {
-        //determine which button was pressed
+        //discard all changes and goes back to the medication list
         if (view == btnCancel) {
-            //discard all changes and goes back to the medication list
+
             finish();
         }
+
+        //tries to save the medication
         if (view == btnSave) {
             boolean hasError = false;
+
             //make sure all edit texts have a value
             if (TextUtils.isEmpty(etxtName.getText().toString())) {
                 etxtName.setError("A name is required");
@@ -92,10 +99,14 @@ public class NewMedicament extends AppCompatActivity {
                         Integer.parseInt(etxtnCurrentTotal.getText().toString())
                 );
 
+                //get the database then the DAO, saves the medication, then finish the layout
                 AppDatabase appDatabase = AppDatabase.getDatabase(getApplicationContext());
                 MedicamentDAO medicamentDAO = appDatabase.medicamentDAO();
                 medicamentDAO.insertNewMedicament(medicament);
+                finish();
             }
         }
     }
+    //END OF PUBLIC METHODS
+    //**********************************************************************************************
 }

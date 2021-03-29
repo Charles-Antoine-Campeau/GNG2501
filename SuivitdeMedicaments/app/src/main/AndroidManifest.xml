@@ -17,6 +17,7 @@
         <activity
             android:name=".associatedtolayouts.NotificationMessage"
             android:parentActivityName=".associatedtolayouts.Menu" />
+        <activity android:name=".associatedtolayouts.ModifyMedication"/>
         <activity android:name=".associatedtolayouts.NewMedicament" />
         <activity android:name=".associatedtolayouts.MedicamentList" />
         <activity android:name=".associatedtolayouts.Settings" />
