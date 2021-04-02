@@ -36,4 +36,16 @@
         android:textAlignment="center"
         android:textSize="35sp" />
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <Button
+        android:id="@+id/btnMenuAlarmList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/go_to_alarm_list"
+        android:textSize="35sp" />
+
 </LinearLayout>

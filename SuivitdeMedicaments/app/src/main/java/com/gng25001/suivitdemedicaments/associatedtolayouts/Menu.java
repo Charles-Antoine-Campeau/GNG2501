@@ -19,6 +19,7 @@ public class Menu extends AppCompatActivity {
     //Elements of the layout
     private Button btnMedList;
     private Button btnSettings;
+    private Button btnAlarmList;
     //END OF VARIABLES
     //**********************************************************************************************
 
@@ -46,13 +47,17 @@ public class Menu extends AppCompatActivity {
     public void onClick(View view){
 
         //Determine which button was press
-        if (view == btnMedList){
+        if (view == btnMedList) {
             //Open the medicament list layout and class
             startActivity(new Intent(getApplicationContext(), MedicamentList.class));
-        }else if (view == btnSettings){
+        } else if (view == btnSettings) {
             //Open the settings layout and class
             startActivity(new Intent(getApplicationContext(), Settings.class));
+        } else if (view == btnAlarmList) {
+            //Open the alarm list layout and class
+            startActivity(new Intent(getApplicationContext(), AlarmList.class));
         }
+
     }
     //END OF PUBLIC METHODS
     //**********************************************************************************************
@@ -65,6 +70,7 @@ public class Menu extends AppCompatActivity {
     private void getLayoutElements(){
         btnMedList = findViewById(R.id.btnMenuGoToMedList);
         btnSettings = findViewById(R.id.btnMenuSettings);
+        btnAlarmList = findViewById(R.id.btnMenuAlarmList);
     }
 
     /**

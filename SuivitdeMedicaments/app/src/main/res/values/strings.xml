@@ -16,4 +16,5 @@
     <string name="modify">Modify</string>
     <string name="modify_medication">Modify Medication</string>
     <string name="alarm_list">Alarm List</string>
+    <string name="go_to_alarm_list">go to alarm list</string>
 </resources>
