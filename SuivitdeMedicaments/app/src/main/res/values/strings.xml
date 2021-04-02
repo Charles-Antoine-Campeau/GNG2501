@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Medication follow up</string>
+    <string name="app_name">Medi-Follow</string>
     <string name="go_to_medicamentation_list">Go to medication list</string>
     <string name="menu">Menu</string>
     <string name="settings">Settings</string>
@@ -15,4 +15,5 @@
     <string name="delete_medication">Delete</string>
     <string name="modify">Modify</string>
     <string name="modify_medication">Modify Medication</string>
+    <string name="alarm_list">Alarm List</string>
 </resources>
