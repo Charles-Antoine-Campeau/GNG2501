@@ -14,6 +14,7 @@
             android:enabled="true"
             android:exported="false"></receiver>
 
+        <activity android:name=".associatedtolayouts.NewAlarm"/>
         <activity android:name=".associatedtolayouts.AlarmList"/>
         <activity
             android:name=".associatedtolayouts.NotificationMessage"
