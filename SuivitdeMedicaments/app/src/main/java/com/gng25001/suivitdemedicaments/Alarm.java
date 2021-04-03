@@ -10,7 +10,7 @@ public class Alarm {
     //**********************************************************************************************
     //VARIABLES
     @ColumnInfo(name="days")
-    Boolean[] selectedDays = {true, false, false, false, false, false, false};
+    boolean[] selectedDays = {true, false, false, false, false, false, false};
 
     @PrimaryKey
     @ColumnInfo(name="nameAndTime")
@@ -27,7 +27,7 @@ public class Alarm {
      * @param selectedDays the days the alarm must trigger
      * @param name the name of the medication associated
      */
-    public Alarm(short hours, short minutes, Boolean[] selectedDays, String name) {
+    public Alarm(short hours, short minutes, boolean[] selectedDays, String name) {
         this.selectedDays = selectedDays;
         this.medicationNameAndTime = name +":" + Short.toString(hours) + ":" + Short.toString(minutes);
     }
