@@ -26,6 +26,12 @@ public abstract class AppDatabase extends RoomDatabase {
      */
      public abstract MedicamentDAO medicamentDAO();
 
+    /**
+     * Expose the AlarmDAO
+     * @return an instance of AlarmDAO
+     */
+    public abstract AlarmDAO alarmDAO();
+
     //Instance for singleton
     private static volatile AppDatabase INSTANCE;
 
