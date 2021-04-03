@@ -1,4 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtNewAlarmTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/new_alarm"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/llNumberPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:id="@+id/npHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/NumberPickerText" />
+
+        <NumberPicker
+            android:id="@+id/npMinutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:theme="@style/NumberPickerText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tbtnSun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/s"
+            android:textOn="@string/s"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnMon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/m"
+            android:textOn="@string/m"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnTue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/t"
+            android:textOn="@string/t"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnWed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/w"
+            android:textOn="@string/w"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnThu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/t"
+            android:textOn="@string/t"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnFri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/f"
+            android:textOn="@string/f"
+            android:textSize="35sp" />
+
+        <ToggleButton
+            android:id="@+id/tbtnSat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/s"
+            android:textOn="@string/s"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spnNewAlarmMedicationList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnNewAlarmCancel"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/btnNewAlarmSave"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:textSize="35sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -17,4 +17,10 @@
     <string name="modify_medication">Modify Medication</string>
     <string name="alarm_list">Alarm List</string>
     <string name="go_to_alarm_list">go to alarm list</string>
+    <string name="new_alarm">New Alarm</string>
+    <string name="s">S</string>
+    <string name="m">M</string>
+    <string name="t">T</string>
+    <string name="w">W</string>
+    <string name="f">F</string>
 </resources>
