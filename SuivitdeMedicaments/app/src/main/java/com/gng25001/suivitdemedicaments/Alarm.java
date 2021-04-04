@@ -9,12 +9,21 @@ public class Alarm {
 
     //**********************************************************************************************
     //VARIABLES
+    @ColumnInfo(name="hour")
+    short hour;
+
+    @ColumnInfo(name="minute")
+    short minute;
+
     @ColumnInfo(name="days")
-    boolean[] selectedDays = {true, false, false, false, false, false, false};
+    boolean[] selectedDays;
+
+    @ColumnInfo(name="name")
+    String medicationName;
 
     @PrimaryKey
-    @ColumnInfo(name="nameAndTime")
-    String medicationNameAndTime;
+    @ColumnInfo(name="notificationID")
+    int notificationID;
     //END OF VARIABLES
     //**********************************************************************************************
 
@@ -22,49 +31,39 @@ public class Alarm {
     //CONSTRUCTOR
     /**
      * Saves the data used to create a pending intent
-     * @param hours the hour the alarm must trigger
-     * @param minutes the minute the alarm must trigger
+     * @param hour the hour the alarm must trigger
+     * @param minute the minute the alarm must trigger
      * @param selectedDays the days the alarm must trigger
-     * @param name the name of the medication associated
+     * @param medicationName the name of the medication associated
+     * @param notificationID the ID associated to the pending intent
      */
-    public Alarm(short hours, short minutes, boolean[] selectedDays, String name) {
+    public Alarm(short hour, short minute, boolean[] selectedDays, String medicationName, int notificationID) {
+        this.hour = hour;
+        this.minute = minute;
         this.selectedDays = selectedDays;
-        this.medicationNameAndTime = name +":" + Short.toString(hours) + ":" + Short.toString(minutes);
+        this.medicationName = medicationName;
+        this.notificationID = notificationID;
     }
     //END OF CONSTRUCTOR
     //**********************************************************************************************
 
     //**********************************************************************************************
     //GETTERS
-    public short getHours() {
-        String[] array = medicationNameAndTime.split(":");
-        return Short.parseShort(array[1]);
-    }
-    public short getMinutes() {
-        String[] array = medicationNameAndTime.split(":");
-        return Short.parseShort(array[2]);
-    }
-    public String getAlarmName() {
-        String[] array = medicationNameAndTime.split(":");
-        return array[0];
-    }
+    public short getHour() {return hour;}
+    public short getMinute() {return minute;}
+    public boolean[] getSelectedDays() {return selectedDays;}
+    public String getMedicationName() {return medicationName;}
+    public int getNotificationID() {return notificationID;}
     //END OF GETTERS
     //**********************************************************************************************
 
     //**********************************************************************************************
     //SETTERS
-    public void setHours(short hours) {
-        String[] array = medicationNameAndTime.split(":");
-        medicationNameAndTime = array[0] + hours + array[2];
-    }
-    public void setMinutes(short minutes) {
-        String[] array = medicationNameAndTime.split(":");
-        medicationNameAndTime = array[0] + array[1] + minutes;
-    }
-    public void setAlarmName(String name) {
-        String[] array = medicationNameAndTime.split(":");
-        medicationNameAndTime = name + array[1] + array[2];
-    }
+    public void setHour(short hour) {this.hour = hour;}
+    public void setMinute(short minute) {this.minute = minute;}
+    public void setSelectedDays(boolean[] selectedDays) {this.selectedDays = selectedDays;}
+    public void setMedicationName(String medicationName) {this.medicationName = medicationName;}
+    public void setNotificationID(int notificationID) {this.notificationID =notificationID;}
     //END OF SETTERS
     //**********************************************************************************************
 }

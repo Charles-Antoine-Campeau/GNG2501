@@ -25,9 +25,9 @@ public interface AlarmDAO {
     @Query("SELECT * FROM Alarm")
     public List<Alarm> loadAllAlarms();
 
-    @Query("SELECT nameAndTime FROM Alarm")
-    public List<String> loadNameAndTime();
+    @Query("SELECT name FROM Alarm")
+    public List<String> loadMedicationName();
 
-    @Query("SELECT * FROM Alarm WHERE nameAndTime LIKE :nameAndTime")
-    public Alarm loadAlarm(String nameAndTime);
+    @Query("SELECT * FROM Alarm WHERE notificationID LIKE :notificationID")
+    public Alarm loadAlarm(int notificationID);
 }
