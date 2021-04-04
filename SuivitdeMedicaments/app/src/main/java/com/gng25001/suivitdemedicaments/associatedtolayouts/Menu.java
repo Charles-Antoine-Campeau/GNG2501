@@ -20,6 +20,9 @@ public class Menu extends AppCompatActivity {
     private Button btnMedList;
     private Button btnSettings;
     private Button btnAlarmList;
+
+    private final String MEDICATION_TO_TAKE = "MEDICATION_TO_TAKE";
+    private final String TO_DO_LATER = "TO_DO_LATER";
     //END OF VARIABLES
     //**********************************************************************************************
 
@@ -81,14 +84,14 @@ public class Menu extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //create a notification channel for elements that needs immediate attention
             NotificationChannel importantChannel = new NotificationChannel(
-                    "MEDICATION_TO_TAKE",
+                    MEDICATION_TO_TAKE,
                     "To do now",
                     NotificationManager.IMPORTANCE_HIGH
             );
 
             //create a notification channel for elements which can be dealt with at later time
             NotificationChannel lesserChannel = new NotificationChannel(
-                    "TO_DO_LATER",
+                    TO_DO_LATER,
                     "Notice",
                     NotificationManager.IMPORTANCE_DEFAULT
             );
