@@ -6,6 +6,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.gng25001.suivitdemedicaments.Alarm;
 import com.gng25001.suivitdemedicaments.Medicament;
 
 import java.util.concurrent.ExecutorService;
@@ -17,7 +18,7 @@ import java.util.concurrent.Executors;
  * @author Charles-Antoine
  * 16/02/2021
  */
-@Database(entities = {Medicament.class}, version = 1)
+@Database(entities = {Medicament.class, Alarm.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
 
     /**
