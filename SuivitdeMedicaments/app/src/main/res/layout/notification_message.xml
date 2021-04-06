@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/NotificationMessageGlobalLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtNotificationMessageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/medication_to_take"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/txtNMMedicationName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/void_text"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/txtNMQuantityLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/_000"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/txtNMDosesSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/_000"
+        android:textSize="35sp" />
+
+    <Button
+        android:id="@+id/btnNMTakeDose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickMN"
+        android:text="@string/take_a_dose"
+        android:textSize="35sp" />
 
 </LinearLayout>

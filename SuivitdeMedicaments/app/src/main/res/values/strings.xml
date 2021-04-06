@@ -24,4 +24,10 @@
     <string name="w">W</string>
     <string name="f">F</string>
     <string name="delete_alarm">Delete Alarm</string>
+    <string name="medication_to_take">Medication to take</string>
+    <string name="void_text">void</string>
+    <string name="_000">000</string>
+    <string name="take_a_dose">Take a dose</string>
+    <string name="quantity_to_take">Quantity to take: </string>
+    <string name="quantity_left">Quantity left: </string>
 </resources>
