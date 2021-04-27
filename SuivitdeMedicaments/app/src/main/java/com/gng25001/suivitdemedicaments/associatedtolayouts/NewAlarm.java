@@ -66,14 +66,17 @@ public class NewAlarm extends AppCompatActivity {
         spnNewAlarmMedicationList = findViewById(R.id.spnNewAlarmMedicationList);
 
         //get the list of all the medication names
-        NameList nameList = NameList.getInstance(getApplicationContext());
-        List<String> names = nameList.getNames(getApplicationContext());
+        NameList nameList = NameList.getInstance(this);
+        List<String> names = nameList.getNames(this);
 
         //create an array with the list
         String[] spinnerArray = new String[names.size()];
         int i = 0;
         for(String s : names) {
-            spinnerArray[i] = s;
+            if (s != null) {
+                spinnerArray[i] = s;
+                i++;
+            }
         }
 
         //create an array adapter with the array and adds it to the spinner
