@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +21,7 @@ public class ModifyMedication extends AppCompatActivity {
     //VARIABLES
     private Button btnCancel;
     private Button btnSave;
-    private EditText etxtName;
+    private TextView etxtName;
     private EditText etxtnDoses;
     private EditText etxtnWaitingTimeNewDoses;
     private EditText etxtnQuantityOfDosesInPrescriptions;
@@ -76,10 +77,6 @@ public class ModifyMedication extends AppCompatActivity {
         if (view == btnSave) {
             boolean hasError = false;
             //make sure all edit texts have a value
-            if (TextUtils.isEmpty(etxtName.getText().toString())) {
-                etxtName.setError("A name is required");
-                hasError = true;
-            }
             if (TextUtils.isEmpty(etxtnDoses.getText().toString())) {
                 etxtnDoses.setError("A dose is required");
                 hasError = true;
